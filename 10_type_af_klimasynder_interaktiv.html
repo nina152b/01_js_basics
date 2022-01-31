@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Hvor mange timer har du fløjet?</h2>
+    <input type="text" id="timer" />
+    <button>Klik og se din CO2-udledning</button>
+
+    <script>
+      let timer = document.querySelector("#timer").value;
+      let co2ud = 109;
+      let total = timer * co2ud;
+
+      document.querySelector("button").addEventListener("click", buttonClicked);
+      function buttonClicked() {
+        if (isNaN(total)) {
+          resultat = "Det er ikke et tal. Prøv igen!";
+        } else {
+          resultat = `Du har fløjet i ${total} timer`;
+        }
+        console.log(resultat);
+      }
+    </script>
+  </body>
+</html>
