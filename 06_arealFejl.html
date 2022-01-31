@@ -30,6 +30,11 @@
         /* her laver vi en if med at arealet ikke er et tal "A IS NOT A NUMEBR" */
         if (isNaN(a)) {
           resultat = "Det er ikke et tal tal. Prøv igen!";
+        } else if (a <= 0) {
+          resultat = "Arealet er mindre end eller lig med 0, så prøv igen";
+        } else {
+          /*her tager vi a - arealets regnstykke og sætter det ind */
+          resultat = `Arealet er ${a}`;
         }
         /*det der kan gøre, at noget ikke gange ordenligt, er regnstykket på linje 28 */
         console.log(resultat);
