@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let timer = Math.round(Math.random() * 10);
+      let co2ud = 109;
+      let total = timer * co2ud;
+      /* husk at erklære variablen for at få teksten på consol.log */
+      let resultat;
+
+      /*her gør vi brug af en if or else for at se, hvad arealet er og hvordan det passer. I forhold til størrelsen på arealet, ændrer det beskeden*/
+      if (total < 100) {
+        resultat = `Du flyver meget lidt, hva'? Du har brugt ${total} kg co2 på din rejse.`;
+      } else if (total <= 200) {
+        resultat = `Okay, okay, der er vist en der godt kan lide at flyve. Du har brugt ${total} kg co2 på din rejse.`;
+      } else if (total <= 600) {
+        resultat = `Er du på vej til Mumbai oder was? Du har brugt ${total} kg CO2`;
+      } else {
+        resultat = `DIT MILJØSVIN. Du har brugt ${total} kg co2 på din rejse.`;
+      }
+
+      console.log(resultat);
+    </script>
+  </body>
+</html>
