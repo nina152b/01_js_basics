@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>
+      her skal vi meddele brugeren om, at der er blevet tastet noget andet ind,
+      end tal
+    </h2>
+
+    <p>Tast længden ind her:</p>
+    <input type="text" id="længde" />
+    <p>Tast bredden ind her:</p>
+    <input type="text" id="bredde" />
+    <button>Klik og beregn arealet</button>
+
+    <script>
+      document.querySelector("button").addEventListener("click", buttonClick);
+
+      function buttonClick() {
+        let længde = document.querySelector("#længde").value;
+        let bredde = document.querySelector("#bredde").value;
+        /* her laver vi en variabel der er = med vores areal */
+        let a = areal(længde, bredde);
+
+        /* her laver vi en if med at arealet ikke er et tal "A IS NOT A NUMEBR" */
+        if (isNaN(a)) {
+          resultat = "Det er ikke et tal tal. Prøv igen!";
+        }
+        /*det der kan gøre, at noget ikke gange ordenligt, er regnstykket på linje 28 */
+        console.log(resultat);
+      }
+
+      function areal(l, b) {
+        return l * b;
+      }
+    </script>
+  </body>
+</html>
